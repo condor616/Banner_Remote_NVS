@@ -1,0 +1,230 @@
+body {
+    font-family: Verdana,Arial,Helvetica,sans-serif;
+    font-size: 0.75em;
+}
+
+html, body {
+    height: auto;
+}
+
+#home {
+    width: 971px;
+	position: relative;
+	width: 100%; /* for IE 6 */
+	overflow: hidden;
+}
+
+div#wrapper div.content{
+	font-family: arial;
+	position: absolute;
+	top: 18px;
+	left: 475px;
+	/*padding: 0 35px 10px 0;*/
+	
+}
+
+div#subpages-wrapper{
+	box-shadow: 0 1px 4px;
+	display: block;
+	background-color: #f7ead6;
+	/*font-family: arial;*/
+	/*position: relative;*/
+	/*top: -175px;*/
+	/*left: 495px;*/
+	/*margin: 7px 0 7px 7px; */
+	height: inherit;
+	max-height: 105;
+	width: 418px;
+	overflow:hidden;
+}
+
+div#metadata-container{
+	/*font-family: arial;*/
+	/*position: absolute;*/
+	/*top: 18px;*/
+	/*left: 968px;*/
+	/*display:inline-block;*/
+	width: 465px;
+	height:160px;
+	background-color: transparent;
+}
+
+div#metadata-container div.metadata{
+	/*padding: 10px 35px 10px 0;*/
+	margin-right: 20px;
+}
+
+
+
+a, a:visited, a:hover, a:active {
+    text-decoration: none;
+}
+a.link{
+    color: #E44C16;
+}
+
+div#subpages{
+	border-style:solid;
+	border-width: 5px;
+	border-color:#FFF;
+	height: 135px;
+}
+
+div#subpages div.metadata{
+	padding: 10px 10px 10px 15px;
+}
+
+div#subpages div.metadata span#subpages-title{
+	display: block;
+	height:auto;
+	font-size: 17px;
+	font-weight:bolder;
+	color: #634328;
+	text-align:left;
+	margin-bottom: 5px;
+}
+
+div#subpages div.metadata span#subpages-description{
+	display: block;
+	height:auto;
+	font-size: 12px;
+	color: #634328;
+	text-align:left;
+	margin-bottom: 5px;
+}
+
+
+h2{
+	display: inline;
+	height:auto;
+	font-size: 28px;
+	font-weight:bolder;
+	color: #FFFFFF;
+	text-align:left;
+	margin-bottom: 5px;
+}
+
+h3{
+	overflow:hidden;
+	height:auto;
+	font-size: 14px;
+	color: #FFFFFF;
+	margin-bottom: 7px;
+}
+
+span#stage-link{
+	display: block;
+	height:auto;
+	font-size: 12px;
+	font-weight:bolder;
+	color: #FFFFFF;
+	text-align:left;
+	margin-top: 5px;
+}
+
+div#wrapper{
+	height: auto;
+    margin: 0 auto;
+    width: 971px;
+	position:relative;
+}
+
+div#wrapper span#stage-link a.link{
+	background: url("../images/_common/icons/icon_yellowButton.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+	background-position: 0 3px;
+	padding-left: 20px;
+	color: #FFF;
+}
+
+div#subpages div#subpages-nav{
+	display: block;
+	margin: 10px 10px 9px 8px;
+	overflow: hidden;
+	width: auto;
+	float: right;
+}
+div#subpages div#subpages-nav div.title{
+	display: inline;
+	text-align: right;
+	color: #cc3300;
+	font-size:11px;
+	font-weight:bolder;
+}
+
+/*------------------------------------*/
+div#subpages div.intros{
+	display: block;
+	text-align:right;
+    float: right;
+    margin: 14px 0 9px 14px;
+    overflow: hidden;
+    width: auto;
+	height:30px;
+	
+}
+
+div#subpages div.intros span.introTitle{
+	display:inline;
+	color: #cc3300;
+	font-weight:bold;
+	font-size:13px;
+	font-family:Arial,Helvetica,sans-serif;
+}
+
+div#subpages div.intros span.introDesc{
+	display:block;
+	color: #cc3300;
+	font-weight:bold;
+	font-size:10px;
+	font-family:Helvetica,sans-serif;
+}
+
+
+/*----------------------------------------*/
+
+
+div#subpages div#subpages-nav div.description{
+	display: block;
+    float: left;
+    position: absolute;
+    text-align: right;
+	color: #cc3300;
+	font-weight:bolder;
+	font-size: 9px;
+}
+
+
+
+div#subpages-nav div.buttons div{
+	background:transparent url("../images/_common/icons/button-icons-sprite.png") no-repeat scroll left top;
+	width:29px;
+	height:29px;
+	margin: 4px 1px 0;
+	position: relative;
+	opacity:0.4;
+	float:left;
+}
+
+div#subpages-nav div.buttons div.icon-document{
+	background-position:0 -62px;
+}
+div#subpages-nav div.buttons div.icon-video{
+	background-position:0 -124px;
+}
+div#subpages-nav div.buttons div.icon-photo{
+	background-position:0 -93px;
+}
+div#subpages-nav div.buttons div.icon-audio{
+	background-position:0 0;
+}
+div#subpages-nav div.buttons div.icon-audio2{
+	background-position:0 -31px;
+}
+
+
+div#subpages div#subpages-nav div.active{
+	opacity:1;
+	cursor:pointer;
+}
+
+
