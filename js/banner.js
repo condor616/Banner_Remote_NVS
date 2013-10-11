@@ -3,6 +3,11 @@ $(document).ready(
 	function(){
 		
 		
+		//TEST JSON READ
+		var feed = "js/data.json";
+		$('div#wrapper').jsonReader(feed);
+		
+		
 		
 		//remove all active class
 		var removeAllActiveClasses = function(){
