@@ -72,6 +72,7 @@ div#subpages{
 
 div#subpages div.metadata{
 	padding: 10px 10px 10px 15px;
+	height: 60px;
 }
 
 div#subpages div.metadata span#subpages-title{
@@ -227,4 +228,7 @@ div#subpages div#subpages-nav div.active{
 	cursor:pointer;
 }
 
+.hidden{
+	display: none;
+}
 
