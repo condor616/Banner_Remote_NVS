@@ -19,6 +19,11 @@ div#wrapper div.content{
 	position: absolute;
 	top: 18px;
 	left: 475px;
+	width: 465px;
+	max-height:310px;
+	overflow:hidden;
+	background-color: transparent;
+	margin: 5px 0;
 	/*padding: 0 35px 10px 0;*/
 	
 }
@@ -32,13 +37,6 @@ div#subpages-wrapper{
 	width: 418px;
 	overflow:hidden;
 	margin: 4px 0;
-}
-
-div#metadata-container{
-	width: 465px;
-	height:160px;
-	background-color: transparent;
-	margin: 5px 0;
 }
 
 div#metadata-container div.metadata{
