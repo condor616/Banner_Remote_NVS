@@ -1,5 +1,10 @@
 (function($){
 	
+	
+	//Variables
+	var jsonData; //it contains the JSON object
+	
+	
 	//Methods
 	var methods = {
 		
@@ -40,6 +45,7 @@
 		
 		//render
 		render: function(data){
+			jsonData = data;
 			alert("JSON Loaded successfully");
 		}
 			
