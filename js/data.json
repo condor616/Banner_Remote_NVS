@@ -1,6 +1,6 @@
 {
-    "Entries": {
-        "Entry": {
+    "Entries": [
+        {
             "Image": "images/malaria-initiative.jpg",
             "Title": {
                 "Text": "Improving child health in Africa",
@@ -15,19 +15,19 @@
             "Links": {
                 "Color": "HEX COlor",
                 "Link 1": [
-					"Learn more",
+                    "Learn more",
                     "http://www.google.it",
                     "blank",
                     "link-url"
                 ],
                 "Link 2": [
-					"More info",
+                    "More info",
                     "http://www.google.it",
                     "self",
                     "link-url"
                 ],
                 "Link 3": [
-					"Read about",
+                    "Read about",
                     "http://apple.com",
                     "blank",
                     "link-url"
@@ -71,5 +71,5 @@
                 }
             }
         }
-    }
+    ]
 }

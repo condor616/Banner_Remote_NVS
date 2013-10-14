@@ -14,7 +14,7 @@ html, body {
 	overflow: hidden;
 }
 
-div#wrapper div.content{
+div#nvs_banner div.content{
 	font-family: arial;
 	position: absolute;
 	top: 18px;
@@ -99,14 +99,14 @@ h3{
 	margin-bottom: 7px;
 }
 
-div#wrapper{
+div#nvs_banner{
 	height: auto;
     margin: 0 auto;
     width: 971px;
 	position:relative;
 }
 
-div#wrapper div.link-list{
+div#nvs_banner div.link-list{
 	height:48px;
 	overflow:hidden;
 	font-size: 12px;
@@ -116,7 +116,7 @@ div#wrapper div.link-list{
 	margin-bottom: 12px;
 }
 
-div#wrapper div.link-list a{
+div#nvs_banner div.link-list a{
 	background:transparent url("../images/_common/icons/url-icon-sprite.png") no-repeat scroll left top;
 	padding-left: 20px;
 	color: #FFF;
@@ -124,16 +124,16 @@ div#wrapper div.link-list a{
 	margin-bottom: 4px;
 }
 
-div#wrapper div.link-list a.url-yellow{
+div#nvs_banner div.link-list a.url-yellow{
 	background-position: 0 -16px;	
 }
 
-div#wrapper div.link-list a.url-red{
+div#nvs_banner div.link-list a.url-red{
 	background-position: 0 0;
 }
 
 
-div#wrapper div.link-list a.pdf{
+div#nvs_banner div.link-list a.pdf{
 	background-position: 0 -32px;
 
 }

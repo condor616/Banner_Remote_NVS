@@ -7,7 +7,7 @@ $(document).ready(
 		var settings = {
 			feed: "/js/data.json"
 		}
-		$('div#wrapper').jsonReader(settings);
+		$('div#nvs_banner').jsonReader(settings);
 		
 		
 		

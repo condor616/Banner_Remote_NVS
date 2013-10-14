@@ -3,7 +3,6 @@
 	//for test purpose
 	var _numberOfEntries;
 
-	//var _jsonData; //it contains the JSON object
 	var _jsonData; //it contains the JSON object
 
 	/*
@@ -79,6 +78,12 @@
 		The following method is responsible to draw a scene. The number of the scene is passed as parameter.
 		*/
 		draw: function(sceneNumber){
+			
+			var _localJson = _jsonScenes[sceneNumber];
+			
+			// Draw the html page here
+			
+			
 			
 		}
 			
