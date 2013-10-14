@@ -29,12 +29,12 @@
 				success: function(data){
 					methods.render(data);
 				}
-				/*,
+				,
 				error: function(xhr, ajaxOptions, thrownError){	
 					alert(xhr.status);
 					alert(thrownError);
 				
-				}*/
+				}
 			});
 		},
 		
@@ -50,8 +50,12 @@
 		
 	
 	$.fn.jsonReader = function(method){
-		methods.init();
-		methods.loadData();
+		
+		if (typeof method == "object" || ! method){
+			return methods.init.apply(this,arguments);
+		}else{
+			$.error(' Method ' + method + ' doesn\'t exist on Jquery.jsonreader');
+		}
 	}
 	
 	
