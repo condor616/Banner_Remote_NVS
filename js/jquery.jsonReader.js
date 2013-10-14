@@ -1,13 +1,26 @@
+// --------------------- Global Variables -------------------------------
+	
+	//for test purpose
+	var _numberOfEntries;
+
+	//var _jsonData; //it contains the JSON object
+	var _jsonData; //it contains the JSON object
+
+	/*
+	The _scenes array contains objects as elements. 
+	Each object contains the associated "entry".
+	Once the entire JSON file get loaded, we call the method createScenes() that will go through the JSON file extracting all the single scenes assigning 
+	every scene to an object within the array.
+	*/
+	var _jsonScenes = new Array(); 
+	
+//-------------------------END Global Variables ---------------------------------------
+
+
 (function($){
 	
-	
-	//Variables
-	var jsonData; //it contains the JSON object
-	
-	
-	//Methods
+	// --------------- Methods -------------------------------------
 	var methods = {
-		
 		
 		//init
 		init: function(settings){
@@ -43,13 +56,34 @@
 			});
 		},
 		
+		
 		//render
 		render: function(data){
-			jsonData = data;
+			_jsonData = data;
+			_numberOfEntries = _jsonData.Entries.length;
+			alert('There are ' + _numberOfEntries + ' entries' );
+			methods.createScenes();
+			
 			alert("JSON Loaded successfully");
+		},
+		
+		createScenes: function(){
+			
+			//cycling through the main JSON file and recognizing each single entry
+			for (var i=0; i<_jsonData.Entries.length; i++){
+				_jsonScenes.push(_jsonData.Entries[i]);
+			}
+		},
+		
+		/*
+		The following method is responsible to draw a scene. The number of the scene is passed as parameter.
+		*/
+		draw: function(sceneNumber){
+			
 		}
 			
-	};//close Methods object
+	};
+	// ------------------- END Methods -------------------------------
 	
 	
 	

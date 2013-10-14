@@ -1,0 +1,147 @@
+{
+    "Entries": [
+        {
+            "Image": "images/malaria-initiative.jpg",
+            "Title": {
+                "Text": "Improving child health in Africa",
+                "Size": "28",
+                "Color": "#FFFFFF"
+            },
+            "Description": {
+                "Description": "Novartis and TED are talking about improving child death in Africa at TEDGlobal 2013. By working togheter, we can dramatically improve healthcare in Africa. And that's worth fighting for.",
+                "Size": "14",
+                "Color": "#FFFFFF"
+            },
+            "Links": {
+                "Color": "HEX COlor",
+                "Link 1": [
+                    "Learn more",
+                    "http://www.google.it",
+                    "blank",
+                    "link-url"
+                ],
+                "Link 2": [
+                    "More info",
+                    "http://www.google.it",
+                    "self",
+                    "link-url"
+                ],
+                "Link 3": [
+                    "Read about",
+                    "http://apple.com",
+                    "blank",
+                    "link-url"
+                ]
+            },
+            "Subpages": {
+                "Subpage 1": {
+                    "IconType": "document",
+                    "iconTitle": "Title 1",
+                    "iconDescription": "Description 1",
+                    "introtitle": "What we're doing: training on child death",
+                    "introDescription": "What we're doing: training on child death"
+                },
+                "Subpage 2": {
+                    "IconType": "photo",
+                    "iconTitle": "Title 2",
+                    "iconDescription": "Description 2",
+                    "introtitle": "Introduction title number two",
+                    "introDescription": "Introduction description number two"
+                },
+                "Subpage 3": {
+                    "IconType": "video",
+                    "iconTitle": "Title 3",
+                    "iconDescription": "Title 4",
+                    "introtitle": "Introduction title number three",
+                    "introDescription": "Introduction description number three"
+                },
+                "Subpage 4": {
+                    "IconType": "audio",
+                    "iconTitle": "Title 4",
+                    "iconDescription": "Description 4",
+                    "introtitle": "Introduction title number four",
+                    "introDescription": "Introduction description number four"
+                },
+                "Subpage 5": {
+                    "IconType": "document",
+                    "iconTitle": "Title 5",
+                    "iconDescription": "Description 5",
+                    "introtitle": "Introduction title number five",
+                    "introDescription": "Introduction description number five"
+                }
+            }
+        },
+		
+		{
+            "Image": "images/malaria-initiative.jpg",
+            "Title": {
+                "Text": "Improving child health in Africa",
+                "Size": "28",
+                "Color": "#FFFFFF"
+            },
+            "Description": {
+                "Description": "Novartis and TED are talking about improving child death in Africa at TEDGlobal 2013. By working togheter, we can dramatically improve healthcare in Africa. And that's worth fighting for.",
+                "Size": "14",
+                "Color": "#FFFFFF"
+            },
+            "Links": {
+                "Color": "HEX COlor",
+                "Link 1": [
+                    "Learn more",
+                    "http://www.google.it",
+                    "blank",
+                    "link-url"
+                ],
+                "Link 2": [
+                    "More info",
+                    "http://www.google.it",
+                    "self",
+                    "link-url"
+                ],
+                "Link 3": [
+                    "Read about",
+                    "http://apple.com",
+                    "blank",
+                    "link-url"
+                ]
+            },
+            "Subpages": {
+                "Subpage 1": {
+                    "IconType": "document",
+                    "iconTitle": "Title 1",
+                    "iconDescription": "Description 1",
+                    "introtitle": "What we're doing: training on child death",
+                    "introDescription": "What we're doing: training on child death"
+                },
+                "Subpage 2": {
+                    "IconType": "photo",
+                    "iconTitle": "Title 2",
+                    "iconDescription": "Description 2",
+                    "introtitle": "Introduction title number two",
+                    "introDescription": "Introduction description number two"
+                },
+                "Subpage 3": {
+                    "IconType": "video",
+                    "iconTitle": "Title 3",
+                    "iconDescription": "Title 4",
+                    "introtitle": "Introduction title number three",
+                    "introDescription": "Introduction description number three"
+                },
+                "Subpage 4": {
+                    "IconType": "audio",
+                    "iconTitle": "Title 4",
+                    "iconDescription": "Description 4",
+                    "introtitle": "Introduction title number four",
+                    "introDescription": "Introduction description number four"
+                },
+                "Subpage 5": {
+                    "IconType": "document",
+                    "iconTitle": "Title 5",
+                    "iconDescription": "Description 5",
+                    "introtitle": "Introduction title number five",
+                    "introDescription": "Introduction description number five"
+                }
+            }
+        }
+    ]
+}
