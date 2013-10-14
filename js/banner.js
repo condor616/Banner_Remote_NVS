@@ -4,8 +4,10 @@ $(document).ready(
 		
 		
 		//TEST JSON READ
-		var feed = "js/data.json";
-		$('div#wrapper').jsonReader(feed);
+		var settings = {
+			feed: "/js/data.json"
+		}
+		$('div#wrapper').jsonReader(settings);
 		
 		
 		
