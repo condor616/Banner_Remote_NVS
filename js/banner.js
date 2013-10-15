@@ -12,6 +12,7 @@ $(document).ready(
 		
 		
 		//remove all active class
+		/*
 		var removeAllActiveClasses = function(){
 			$('div#subpages-nav div.buttons div').each(
 				function(){
@@ -21,8 +22,9 @@ $(document).ready(
 				}
   			);
 		}
-			
+		*/	
 		
+		/*
 		//Applying hover event to buttons
 		$('div#subpages-nav div.buttons div').hover(
 			function($e){
@@ -46,11 +48,12 @@ $(document).ready(
 				
 			}
 		);
+		*/
 		
 		/*
 		Once the page is loaded, the first button get automatically hevered
 		*/
-		$firstImg = $('div#subpages-nav div.buttons div').first().addClass('active').trigger('mouseover');
+		//$('div#subpages-nav div.buttons div').first().addClass('active').trigger('mouseover');
 		
 		
 		

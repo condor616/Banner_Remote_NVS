@@ -7,13 +7,6 @@
 	var pointer;
 	var _jsonData; //it contains the JSON object
 	
-
-
-	
-	//-------------------------END Global Variables ---------------------------------------
-	
-	
-	
 	// --------------- Methods -------------------------------------
 	var methods = {
 
@@ -56,47 +49,126 @@
 			});
 		},
 		
-		
-		
-		
-		//render
-		render: function(data){
-			_numberOfEntries = _jsonData.Entries.length;
-			alert('There are ' + _numberOfEntries + ' entries' );
-			//methods.createScenes();
-			
-			alert("JSON Loaded successfully");
-		},
-		
-		
-		
-		
-		
-		/*
-		createScenes: function(){
-			//cycling through the main JSON file and recognizing each single entry
-			for (var i=0; i<_jsonData.Entries.length; i++){
-				_jsonScenes.push(_jsonData.Entries[i]);
-			}
-		},
-		*/
-		
-		
-		
-		
-		
+
+
 		/*
 		The following method is responsible to draw a scene. The number of the scene is passed as parameter.
 		*/
 		draw: function(sceneNumber){
 			
+			
+			//remove the class="ACTIVE" from all the buttons
+			var removeAllActiveClasses = function(){
+				$('div#subpages div.buttons div').each(
+					function(){
+						if ($(this).hasClass('active')){
+							$(this).removeClass('active');
+						}
+					}
+				);
+			}
+			
 			/*
 			We have to read data from the _jsonData object (the position is determined by sceneNumber)
 			*/
+			//IMAGE
+			$(pointer).html('<img width=\"971\" height=\"347\" src=\"' +_jsonData.Entries[sceneNumber-1].Image + '\">');
+			
+			//DIVs
+			$('<div class=\"content\"></div>').insertAfter('div#nvs_banner img').append('<div class=\"metadata\"></div>');				
+			
+			//TITLE
+			$('div.metadata').append('<h2>' + _jsonData.Entries[sceneNumber-1].Title.Text + '</h2>');
+			$('h2').css('color', _jsonData.Entries[sceneNumber-1].Title.Color, 'font-size', _jsonData.Entries[sceneNumber-1].Title.Size +'px');
+		
+				
+			//DESCRIPTION
+			$('div.metadata').append('<h3>' + _jsonData.Entries[sceneNumber-1].Description.Text + '</h3>');
+			$('h3').css('color', _jsonData.Entries[sceneNumber-1].Description.Color, 'font-size', _jsonData.Entries[sceneNumber-1].Description.Size+'px');
+		
+			
+			//Let's create the link-list 
+			$('div.metadata').append('<div class=\"link-list\"></div>');
+			//How many links?
+			console.log("There are " + _jsonData.Entries[sceneNumber-1].Links.length + " links");
+			
+			for (i=0; i<_jsonData.Entries[sceneNumber-1].Links.length; i++){
+				$('div.link-list').append('<a class=\"'  + _jsonData.Entries[sceneNumber-1].Links[i].Type + 
+										  '\" href=\"'   + _jsonData.Entries[sceneNumber-1].Links[i].Url + 
+										  '\" target=\"' + _jsonData.Entries[sceneNumber-1].Links[i].Target + 
+										  '\">'          + _jsonData.Entries[sceneNumber-1].Links[i].Text +
+										  '</a>');
+			}
+			
+			$('<div id=\"subpages-wrapper\"></div>').insertAfter('div.metadata').append('<div id=\"subpages\"></div>');
+			$('div#subpages').append('<div class=\"metadata\"></div>');
+			
+			/*
+			At firt page load, introTitle and introDescription are set to the value contained in the first subpage.
+			*/
+			$('div#subpages div.metadata').append('<span id=\"subpages-title\">' + _jsonData.Entries[sceneNumber-1].Subpages[0].introTitle + '</span>',
+												  '<span id=\"subpages-description\">' + _jsonData.Entries[sceneNumber-1].Subpages[0].introDescription + '</span>');
+			
+			$('<div id=\"subpages-nav\"></div>').insertAfter('div#subpages div.metadata');
+			$('div#subpages-nav').append('<div class=\"buttons\"></div>');
+			
+			/*
+			Cycle through the button list and draw
+			*/
+			for (var j=0; j<_jsonData.Entries[sceneNumber-1].Subpages.length; j++){
+				$('div.buttons').append('<div class=\"icon-' + _jsonData.Entries[sceneNumber-1].Subpages[j].iconType + '\"></div>');
+				
+				$('div.icon-'+_jsonData.Entries[sceneNumber-1].Subpages[j].iconType+':eq(j)').append('<span class=\"title hidden\"></span>');
+				$('div.icon-'+_jsonData.Entries[sceneNumber-1].Subpages[j].iconType+':eq(j)').append('<span class=\"desc hidden\"></span>');
+				$('div.icon-'+_jsonData.Entries[sceneNumber-1].Subpages[j].iconType+':eq(j)').append('<span class=\"subpages-title hidden\"></span>');
+				$('div.icon-'+_jsonData.Entries[sceneNumber-1].Subpages[j].iconType+':eq(j)').append('<span class=\"subpages-description hidden\"></span>');
+			}
+			
+			//create the intros div
+			$('<div class=\"intros\"></div>').insertAfter('div#subpages-nav');
+			$('div.intros').append('<span class=\"introTitle\"></span>', '<span class=\"introDesc\"></span>');
+			
+			//apply hover event to buttons
+			$('div#subpages div.buttons div').hover(
+				function($e){
+					removeAllActiveClasses();
+					
+					//which button am I?
+					var index = $(this).index();
+					//console.log(index);
+					
+					$(this).addClass('active');	
+					$('div.intros span.introTitle').html(_jsonData.Entries[sceneNumber-1].Subpages[index].iconTitle);
+					$('div.intros span.introDesc').html(_jsonData.Entries[sceneNumber-1].Subpages[index].iconDescription);
+					$('div#subpages div.metadata span#subpages-title').html(_jsonData.Entries[sceneNumber-1].Subpages[index].introTitle);
+					$('div#subpages div.metadata span#subpages-description').html(_jsonData.Entries[sceneNumber-1].Subpages[index].introDescription);
+					
+					
+				}
+			
+			);
+			$('div#subpages-nav div.buttons div').first().addClass('active').trigger('mouseover');
 			
 			
-			// Draw the html page here
-			$(pointer).append($('<img width=\"971\" height=\"347\" src=\"' +_jsonData.Entries[sceneNumber-1].Image + '\">'));	
+			
+			
+			
+			
+			
+			
+				
+				
+				
+				
+			
+			
+			
+			
+			
+			
+			
+			
+		
 		}
 			
 	};
