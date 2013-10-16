@@ -1,7 +1,7 @@
 {
     "Entries": [
         {
-            "Image": "images/malaria-initiative.jpg",
+            "Image": "../images/malaria-initiative.jpg",
             "Title": {
                 "Text": "Improving child health in Africa",
                 "Size": "28",

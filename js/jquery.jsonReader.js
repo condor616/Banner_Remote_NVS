@@ -7,6 +7,7 @@
 	var pointer;
 	var _jsonData; //it contains the JSON object
 	
+	
 	// --------------- Methods -------------------------------------
 	var methods = {
 
@@ -16,17 +17,23 @@
 			pointer = this;
 			
 			_defaultSettings = {
-				feed: "/js/data.json"
+				feed: "/js/data.json",
+				template: "/templates/template1.html"
 			}
 			//overwrite the default values with the variables
 			if (settings) $.extend(_defaultSettings, settings);	
 			
-			methods.loadData(_defaultSettings.feed);
-			
+			//methods.loadTemplate(_defaultSettings.template);
+			$(pointer).load(_defaultSettings.template, function(){
+				methods.loadData(_defaultSettings.feed)
+			});
 		},
 		
-		
-		
+		/*
+		loadTemplate: function(template){
+			$(pointer).load(template,methods.loadData(_defaultSettings.feed));
+		},
+		*/
 		
 		
 		//loaddata
@@ -68,12 +75,12 @@
 				);
 			}
 			
-			/*
-			We have to read data from the _jsonData object (the position is determined by sceneNumber)
-			*/
-			//IMAGE
-			$(pointer).html('<img width=\"971\" height=\"347\" src=\"' +_jsonData.Entries[sceneNumber-1].Image + '\">');
 			
+			//We have to read data from the _jsonData object (the position is determined by sceneNumber)
+			
+			//IMAGE
+			$('div#nvs_banner img').attr('src',_jsonData.Entries[sceneNumber-1].Image);
+			/*
 			//DIVs
 			$('<div class=\"content\"></div>').insertAfter('div#nvs_banner img').append('<div class=\"metadata\"></div>');				
 			
@@ -103,18 +110,18 @@
 			$('<div id=\"subpages-wrapper\"></div>').insertAfter('div.metadata').append('<div id=\"subpages\"></div>');
 			$('div#subpages').append('<div class=\"metadata\"></div>');
 			
-			/*
-			At firt page load, introTitle and introDescription are set to the value contained in the first subpage.
-			*/
+			
+			//At firt page load, introTitle and introDescription are set to the value contained in the first subpage.
+			
 			$('div#subpages div.metadata').append('<span id=\"subpages-title\">' + _jsonData.Entries[sceneNumber-1].Subpages[0].introTitle + '</span>',
 												  '<span id=\"subpages-description\">' + _jsonData.Entries[sceneNumber-1].Subpages[0].introDescription + '</span>');
 			
 			$('<div id=\"subpages-nav\"></div>').insertAfter('div#subpages div.metadata');
 			$('div#subpages-nav').append('<div class=\"buttons\"></div>');
 			
-			/*
-			Cycle through the button list and draw
-			*/
+			
+			//Cycle through the button list and draw
+			
 			for (var j=0; j<_jsonData.Entries[sceneNumber-1].Subpages.length; j++){
 				$('div.buttons').append('<div class=\"icon-' + _jsonData.Entries[sceneNumber-1].Subpages[j].iconType + '\"></div>');
 				
@@ -142,33 +149,13 @@
 					$('div.intros span.introDesc').html(_jsonData.Entries[sceneNumber-1].Subpages[index].iconDescription);
 					$('div#subpages div.metadata span#subpages-title').html(_jsonData.Entries[sceneNumber-1].Subpages[index].introTitle);
 					$('div#subpages div.metadata span#subpages-description').html(_jsonData.Entries[sceneNumber-1].Subpages[index].introDescription);
-					
-					
 				}
 			
 			);
 			$('div#subpages-nav div.buttons div').first().addClass('active').trigger('mouseover');
+
 			
-			
-			
-			
-			
-			
-			
-			
-				
-				
-				
-				
-			
-			
-			
-			
-			
-			
-			
-			
-		
+		*/
 		}
 			
 	};
