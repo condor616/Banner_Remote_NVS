@@ -5,7 +5,7 @@ $(document).ready(
 		
 		//TEST JSON READ
 		var settings = {
-			feed: "/js/data.json"
+			feed: "/js/data1.json"
 		}
 		
 		

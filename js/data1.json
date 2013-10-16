@@ -1,0 +1,50 @@
+{
+    "Entries": [
+        {
+            "Image": "../images/malaria-initiative.jpg",
+            "Title": {
+                "Text": "Improving child health in Africa",
+                "Size": "28",
+                "Color": "#FFFFFF"
+            },
+            "Description": {
+                "Text": "Novartis and TED are talking about improving child death in Africa at TEDGlobal 2013. By working togheter, we can dramatically improve healthcare in Africa. And that's worth fighting for.",
+                "Size": "14",
+                "Color": "#FFFFFF"
+            },
+            "Links": [
+                {
+                    "Text": "Learn more",
+                    "Url": "http://www.google.it",
+                    "Target": "blank",
+                    "Type": "url-red",
+                    "Color": "#FFFFFF"
+                }
+            ],
+            "Subpages": [
+                
+                {
+                    "iconType": "video",
+                    "iconTitle": "Title 3",
+                    "iconDescription": "Title 3",
+                    "introTitle": "Introduction title number three",
+                    "introDescription": "Introduction description number three"
+                },
+                {
+                    "iconType": "photo",
+                    "iconTitle": "Title 4",
+                    "iconDescription": "Description 4",
+                    "introTitle": "Introduction title number four",
+                    "introDescription": "Introduction description number four"
+                },
+                {
+                    "iconType": "document",
+                    "iconTitle": "Title 5",
+                    "iconDescription": "Description 5",
+                    "introTitle": "Introduction title number five",
+                    "introDescription": "Introduction description number five"
+                }
+            ]
+        }
+    ]
+}
