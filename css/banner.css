@@ -122,6 +122,7 @@ div#nvs_banner div.link-list a{
 	color: #FFF;
 	display:block;
 	margin-bottom: 4px;
+	height: 13px;
 }
 
 div#nvs_banner div.link-list a.url-yellow{
