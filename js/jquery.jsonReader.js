@@ -127,8 +127,8 @@
 			
 
 			//apply click event to buttons
-			$('div#subpages div.buttons div').click(function(e) {
-                alert("You clicked on the button");
+			$('div#nvs_banner a.nav').click(function(e) {
+                alert("You clicked on arrown");
 				
             });
 		
