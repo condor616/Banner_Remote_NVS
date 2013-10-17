@@ -14,6 +14,43 @@ html, body {
 	overflow: hidden;
 }
 
+
+div#nvs_banner div.navBtn{
+	position: absolute;
+	height: 51px;
+	width: 955px;
+	top: 150px;
+	left: 7px;
+}
+
+
+div#nvs_banner div.navBtn a{
+	background:transparent url("../images/_common/icons/nav_arrows.png") no-repeat scroll left top;
+	height: 51px;
+	width: 49px;
+}
+
+div#nvs_banner div.navBtn a.next{
+	background-position: 0 -51px;
+	float: right;
+}
+
+div#nvs_banner div.navBtn a.next:hover{
+	background-position: 0 -101px;
+	cursor:pointer;
+}
+
+div#nvs_banner div.navBtn a.prev{
+	background-position: 0 -1px;
+	float: left;
+}	
+
+div#nvs_banner div.navBtn a.prev:hover{
+	background-position: 0 -151px;
+	cursor:pointer;
+}	
+
+
 div#nvs_banner div.content{
 	font-family: arial;
 	position: absolute;
