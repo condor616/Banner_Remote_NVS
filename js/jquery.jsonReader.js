@@ -23,23 +23,11 @@
 			//overwrite the default values with the variables
 			if (settings) $.extend(_defaultSettings, settings);	
 			
-			//methods.loadTemplate(_defaultSettings.template);
-			/*
-			$(pointer).load(_defaultSettings.template, function(){
-				methods.loadData(_defaultSettings.feed)
-			});
-			*/
-			
 			methods.loadTemplate(pointer, _defaultSettings.template, function(){
 				methods.loadData(_defaultSettings.feed)
 			});
 		},
-		
-		/*
-		loadTemplate: function(template){
-			$(pointer).load(template,methods.loadData(_defaultSettings.feed));
-		},
-		*/
+	
 		
 		
 		//loaddata
@@ -85,6 +73,15 @@
 					}
 				);
 			}
+			
+			
+			/*
+			If the JSON file contains only one entry, then remove the arrows
+			*/
+			if (_jsonData.Entries.length == 1){
+				$('div#nvs_banner a.nav').remove();
+			}
+			
 
 			//IMAGE
 			$('div#nvs_banner img').attr('src',_jsonData.Entries[sceneNumber-1].Image);
@@ -128,8 +125,13 @@
 
 			//apply click event to buttons
 			$('div#nvs_banner a.nav').click(function(e) {
-                alert("You clicked on arrown");
-				
+                //which attow am I?
+				if ($(this).hasClass('next')){
+					alert("You pressed the NEXT arrow");
+				}
+				else{
+					alert("You pressed the PREV arrow");
+				}
             });
 		
 			
