@@ -6,6 +6,8 @@
 	// --------------------- Global Variables -------------------------------
 	var pointer;
 	var _jsonData; //it contains the JSON object
+	var numberOfScenes;
+	var currentScene;
 	
 	
 	// --------------- Methods -------------------------------------
@@ -40,7 +42,9 @@
 				dataType: 'json',
 				success: function(data){
 					_jsonData = data;
-					methods.draw(1);
+					numberOfScenes = _jsonData.Entries.length;
+					currentScene = 1;
+					methods.draw(currentScene);
 				},
 				error: function(xhr, ajaxOptions, thrownError){	
 					alert(xhr.status);
@@ -93,6 +97,7 @@
 			//DESCRIPTION
 			$('div.metadata').find('h3').html(_jsonData.Entries[sceneNumber-1].Description.Text).css('color', _jsonData.Entries[sceneNumber-1].Description.Color, 'font-size', _jsonData.Entries[sceneNumber-1].Description.Size+'px');
 		
+			//create all the links	
 			
 			for (i=0; i<_jsonData.Entries[sceneNumber-1].Links.length; i++){
 				
@@ -122,17 +127,38 @@
 				$('div.icon-'+_jsonData.Entries[sceneNumber-1].Subpages[j].iconType+':eq(j)').append('<span class=\"subpages-description hidden\"></span>');
 			}
 			
+//         --------------------------------------------- EVENTS BINDING -------------------------------------------------------------
 
-			//apply click event to buttons
-			$('div#nvs_banner a.nav').click(function(e) {
-                //which attow am I?
-				if ($(this).hasClass('next')){
-					alert("You pressed the NEXT arrow");
-				}
-				else{
-					alert("You pressed the PREV arrow");
-				}
-            });
+
+			//apply click event to arrows (if any arrow exists)
+			if (numberOfScenes >1){
+				$('div#nvs_banner a.next').click(function(e) {
+					$(pointer).find('div#nvs_banner').empty();
+					$(pointer).jsonReader('loadTemplate', pointer, _defaultSettings.template, function(){
+						if(currentScene == numberOfScenes){
+							currentScene = 1;
+							methods.draw(currentScene);
+						}else{
+							currentScene++;
+							methods.draw(currentScene);
+						}
+						
+					});
+			});
+			
+				$('div#nvs_banner a.prev').click(function(e) {
+					$(pointer).find('div#nvs_banner').empty();
+					$(pointer).jsonReader('loadTemplate', pointer, _defaultSettings.template, function(){
+						if (currentScene == 1){
+							currentScene = numberOfScenes;
+							methods.draw(currentScene);
+						}else{
+							currentScene--;
+							methods.draw(currentScene);
+						}
+					});
+			});
+			}
 		
 			
 			//apply hover event to buttons
@@ -152,6 +178,8 @@
 				}
 			);
 			$('div#subpages-nav div.buttons div').first().addClass('active').trigger('mouseover');
+			
+			// -------------------------------------------------------- END EVENT BINDING ---------------------------------------------------------------
 		}
 			
 	};
