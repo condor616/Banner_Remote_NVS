@@ -83,12 +83,12 @@
 			If the JSON file contains only one entry, then remove the arrows
 			*/
 			if (_jsonData.Entries.length == 1){
-				$('div#nvs_banner a.nav').remove();
+				$('div.nvs_banner a.nav').remove();
 			}
 			
 
 			//IMAGE
-			$('div#nvs_banner img').attr('src',_jsonData.Entries[sceneNumber-1].Image);
+			$('div.nvs_banner img').attr('src',_jsonData.Entries[sceneNumber-1].Image);
 	
 			//TITLE
 			$('div.metadata').find('h2').html(_jsonData.Entries[sceneNumber-1].Title.Text).css('color', _jsonData.Entries[sceneNumber-1].Title.Color, 'font-size', _jsonData.Entries[sceneNumber-1].Title.Size +'px');
@@ -132,8 +132,8 @@
 
 			//apply click event to arrows (if any arrow exists)
 			if (numberOfScenes >1){
-				$('div#nvs_banner a.next').click(function(e) {
-					$(pointer).find('div#nvs_banner').empty();
+				$('div.nvs_banner a.next').click(function(e) {
+					$(pointer).find('div.nvs_banner').empty();
 					$(pointer).jsonReader('loadTemplate', pointer, _defaultSettings.template, function(){
 						if(currentScene == numberOfScenes){
 							currentScene = 1;
@@ -146,8 +146,8 @@
 					});
 			});
 			
-				$('div#nvs_banner a.prev').click(function(e) {
-					$(pointer).find('div#nvs_banner').empty();
+				$('div.nvs_banner a.prev').click(function(e) {
+					$(pointer).find('div.nvs_banner').empty();
 					$(pointer).jsonReader('loadTemplate', pointer, _defaultSettings.template, function(){
 						if (currentScene == 1){
 							currentScene = numberOfScenes;
