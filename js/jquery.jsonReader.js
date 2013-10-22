@@ -86,46 +86,78 @@
 				$('div.nvs_banner a.nav').remove();
 			}
 			
-
-			//IMAGE
-			$('div.nvs_banner img').attr('src',_jsonData.Entries[sceneNumber-1].Image);
-	
-			//TITLE
-			$('div.metadata').find('h2').html(_jsonData.Entries[sceneNumber-1].Title.Text).css('color', _jsonData.Entries[sceneNumber-1].Title.Color, 'font-size', _jsonData.Entries[sceneNumber-1].Title.Size +'px');
-		
-				
-			//DESCRIPTION
-			$('div.metadata').find('h3').html(_jsonData.Entries[sceneNumber-1].Description.Text).css('color', _jsonData.Entries[sceneNumber-1].Description.Color, 'font-size', _jsonData.Entries[sceneNumber-1].Description.Size+'px');
-		
-			//create all the links	
 			
-			for (i=0; i<_jsonData.Entries[sceneNumber-1].Links.length; i++){
+			//now we call the appropriate draw function based on what specified within the JSON file
+			switch (_jsonData.Entries[sceneNumber-1].TemplateType){
+				
+				case 'specialEventTemplate':
+				
+					//IMAGE
+					$('div.nvs_banner img').attr('src',_jsonData.Entries[sceneNumber-1].Image);
+	
+					//TITLE
+					$('div.metadata').find('h2').html(_jsonData.Entries[sceneNumber-1].Title.Text).css('color', _jsonData.Entries[sceneNumber-1].Title.Color, 'font-size', _jsonData.Entries[sceneNumber-1].Title.Size +'px');
+		
+				
+					//DESCRIPTION
+					$('div.metadata').find('h3').html(_jsonData.Entries[sceneNumber-1].Description.Text).css('color', _jsonData.Entries[sceneNumber-1].Description.Color, 'font-size', _jsonData.Entries[sceneNumber-1].Description.Size+'px');
+		
+					//create all the links	
+			
+					for (i=0; i<_jsonData.Entries[sceneNumber-1].Links.length; i++){
 				
 				
-				$('div.link-list').append('<a class=\"'  + _jsonData.Entries[sceneNumber-1].Links[i].Type + 
+						$('div.link-list').append('<a class=\"'  + _jsonData.Entries[sceneNumber-1].Links[i].Type + 
 										  '\" href=\"'   + _jsonData.Entries[sceneNumber-1].Links[i].Url + 
 										  '\" target=\"' + _jsonData.Entries[sceneNumber-1].Links[i].Target + 
 										  '\">'          + _jsonData.Entries[sceneNumber-1].Links[i].Text +
 										  '</a>');
 				
-			}
+					}
 
-			//At firt page load, introTitle and introDescription are set to the value contained in the first subpage.
-			$('div#subpages div.metadata').find('span#subpages-title').html(_jsonData.Entries[sceneNumber-1].Subpages[0].introTitle);
-			$('div#subpages div.metadata').find('span#subpages-description').html(_jsonData.Entries[sceneNumber-1].Subpages[0].introTitle);
+					//At firt page load, introTitle and introDescription are set to the value contained in the first subpage.
+					$('div#subpages div.metadata').find('span#subpages-title').html(_jsonData.Entries[sceneNumber-1].Subpages[0].introTitle);
+					$('div#subpages div.metadata').find('span#subpages-description').html(_jsonData.Entries[sceneNumber-1].Subpages[0].introTitle);
 												  
 		
-			//Cycle through the button list and draw
+					//Cycle through the button list and draw
 			
-			for (var j=0; j<_jsonData.Entries[sceneNumber-1].Subpages.length; j++){
+					for (var j=0; j<_jsonData.Entries[sceneNumber-1].Subpages.length; j++){
 				
-				$('div.buttons').append('<div class=\"icon-' + _jsonData.Entries[sceneNumber-1].Subpages[j].iconType + '\"></div>');
+						$('div.buttons').append('<div class=\"icon-' + _jsonData.Entries[sceneNumber-1].Subpages[j].iconType + '\"></div>');
 				
-				$('div.icon-'+_jsonData.Entries[sceneNumber-1].Subpages[j].iconType+':eq(j)').append('<span class=\"title hidden\"></span>');
-				$('div.icon-'+_jsonData.Entries[sceneNumber-1].Subpages[j].iconType+':eq(j)').append('<span class=\"desc hidden\"></span>');
-				$('div.icon-'+_jsonData.Entries[sceneNumber-1].Subpages[j].iconType+':eq(j)').append('<span class=\"subpages-title hidden\"></span>');
-				$('div.icon-'+_jsonData.Entries[sceneNumber-1].Subpages[j].iconType+':eq(j)').append('<span class=\"subpages-description hidden\"></span>');
-			}
+						$('div.icon-'+_jsonData.Entries[sceneNumber-1].Subpages[j].iconType+':eq(j)').append('<span class=\"title hidden\"></span>');
+						$('div.icon-'+_jsonData.Entries[sceneNumber-1].Subpages[j].iconType+':eq(j)').append('<span class=\"desc hidden\"></span>');
+						$('div.icon-'+_jsonData.Entries[sceneNumber-1].Subpages[j].iconType+':eq(j)').append('<span class=\"subpages-title hidden\"></span>');
+						$('div.icon-'+_jsonData.Entries[sceneNumber-1].Subpages[j].iconType+':eq(j)').append('<span class=\"subpages-description hidden\"></span>');
+					}
+					
+					//apply hover event to buttons within the special event banner
+					$('div#subpages div.buttons div').hover(
+						function($e){
+							removeAllActiveClasses();
+					
+							//which button am I?
+							var index = $(this).index();
+							//console.log(index);
+					
+							$(this).addClass('active');	
+							$('div.intros span.introTitle').html(_jsonData.Entries[sceneNumber-1].Subpages[index].iconTitle);
+							$('div.intros span.introDesc').html(_jsonData.Entries[sceneNumber-1].Subpages[index].iconDescription);
+							$('div#subpages div.metadata span#subpages-title').html(_jsonData.Entries[sceneNumber-1].Subpages[index].introTitle);
+							$('div#subpages div.metadata span#subpages-description').html(_jsonData.Entries[sceneNumber-1].Subpages[index].introDescription);
+						}
+					);
+					$('div#subpages-nav div.buttons div').first().addClass('active').trigger('mouseover');
+			
+			// -------------------------------------------------------- END EVENT BINDING ---------------------------------------------------------------
+				
+				
+			
+				}
+			
+
+			
 			
 //         --------------------------------------------- EVENTS BINDING -------------------------------------------------------------
 

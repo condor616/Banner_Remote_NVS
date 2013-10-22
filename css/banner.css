@@ -132,10 +132,11 @@ h3{
 }
 
 div.nvs_banner{
-	height: auto;
+	height: 347px;
     margin: 0 auto;
     width: 971px;
 	position:relative;
+	overflow: hidden;
 }
 
 div.nvs_banner div.link-list{
