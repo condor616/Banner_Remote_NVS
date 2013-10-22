@@ -66,19 +66,13 @@
 		The following method is responsible to draw a scene. The number of the scene is passed as parameter.
 		*/
 		draw: function(sceneNumber){
-
-			//remove the class="ACTIVE" from all the buttons
-			var removeAllActiveClasses = function(){
-				$('div#subpages div.buttons div').each(
-					function(){
-						if ($(this).hasClass('active')){
-							$(this).removeClass('active');
-						}
-					}
-				);
-			}
+			
+			/*
+			We draw the new content within a temp div (hidden) and then we swap the content between the hidden div and the main div (applying effects)
+			*/
 			
 			
+		
 			/*
 			If the JSON file contains only one entry, then remove the arrows
 			*/
@@ -152,15 +146,29 @@
 			
 			// -------------------------------------------------------- END EVENT BINDING ---------------------------------------------------------------
 				
+					break;
 				
 			
-				}
+				} //end first switch-case
+				
+				
+				//HERE YOU CAN INSERT OTHER DRAW-TEMPLATE CASES
 			
 
 			
 			
-//         --------------------------------------------- EVENTS BINDING -------------------------------------------------------------
+//         --------------------------------------------- Navigation Arrows EVENTS BINDING -------------------------------------------------------------
 
+			//remove the class="ACTIVE" from all the buttons
+			var removeAllActiveClasses = function(){
+				$('div#subpages div.buttons div').each(
+					function(){
+						if ($(this).hasClass('active')){
+							$(this).removeClass('active');
+						}
+					}
+				);
+			}
 
 			//apply click event to arrows (if any arrow exists)
 			if (numberOfScenes >1){
@@ -191,26 +199,6 @@
 					});
 			});
 			}
-		
-			
-			//apply hover event to buttons
-			$('div#subpages div.buttons div').hover(
-				function($e){
-					removeAllActiveClasses();
-					
-					//which button am I?
-					var index = $(this).index();
-					//console.log(index);
-					
-					$(this).addClass('active');	
-					$('div.intros span.introTitle').html(_jsonData.Entries[sceneNumber-1].Subpages[index].iconTitle);
-					$('div.intros span.introDesc').html(_jsonData.Entries[sceneNumber-1].Subpages[index].iconDescription);
-					$('div#subpages div.metadata span#subpages-title').html(_jsonData.Entries[sceneNumber-1].Subpages[index].introTitle);
-					$('div#subpages div.metadata span#subpages-description').html(_jsonData.Entries[sceneNumber-1].Subpages[index].introDescription);
-				}
-			);
-			$('div#subpages-nav div.buttons div').first().addClass('active').trigger('mouseover');
-			
 			// -------------------------------------------------------- END EVENT BINDING ---------------------------------------------------------------
 		}
 			
