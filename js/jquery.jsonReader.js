@@ -68,12 +68,6 @@
 		draw: function(sceneNumber){
 			
 			/*
-			We draw the new content within a temp div (hidden) and then we swap the content between the hidden div and the main div (applying effects)
-			*/
-			
-			
-		
-			/*
 			If the JSON file contains only one entry, then remove the arrows
 			*/
 			if (_jsonData.Entries.length == 1){
@@ -126,10 +120,23 @@
 						$('div.icon-'+_jsonData.Entries[sceneNumber-1].Subpages[j].iconType+':eq(j)').append('<span class=\"subpages-description hidden\"></span>');
 					}
 					
+					
+					//remove the class="ACTIVE" from all the buttons
+					var clearActiveClasses = function(){
+						$('div#subpages-nav div.buttons div').each(
+							function(){
+								if ($(this).hasClass('active')){
+									$(this).removeClass('active');
+								}
+							}
+						);
+					}
+					
+					
 					//apply hover event to buttons within the special event banner
 					$('div#subpages div.buttons div').hover(
 						function($e){
-							removeAllActiveClasses();
+							clearActiveClasses();
 					
 							//which button am I?
 							var index = $(this).index();
@@ -141,8 +148,8 @@
 							$('div#subpages div.metadata span#subpages-title').html(_jsonData.Entries[sceneNumber-1].Subpages[index].introTitle);
 							$('div#subpages div.metadata span#subpages-description').html(_jsonData.Entries[sceneNumber-1].Subpages[index].introDescription);
 						}
-					);
-					$('div#subpages-nav div.buttons div').first().addClass('active').trigger('mouseover');
+					);					
+					
 			
 			// -------------------------------------------------------- END EVENT BINDING ---------------------------------------------------------------
 				
@@ -150,7 +157,8 @@
 				
 			
 				} //end first switch-case
-				
+				$('div#subpages-nav div.buttons div').first().mouseover();
+
 				
 				//HERE YOU CAN INSERT OTHER DRAW-TEMPLATE CASES
 			
@@ -159,16 +167,7 @@
 			
 //         --------------------------------------------- Navigation Arrows EVENTS BINDING -------------------------------------------------------------
 
-			//remove the class="ACTIVE" from all the buttons
-			var removeAllActiveClasses = function(){
-				$('div#subpages div.buttons div').each(
-					function(){
-						if ($(this).hasClass('active')){
-							$(this).removeClass('active');
-						}
-					}
-				);
-			}
+			
 
 			//apply click event to arrows (if any arrow exists)
 			if (numberOfScenes >1){
