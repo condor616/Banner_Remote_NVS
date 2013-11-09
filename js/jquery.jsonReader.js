@@ -1,3 +1,9 @@
+/*
+JSON File:
+ - TemplateType: 
+       - 0: specialEventTemplate
+	   - 1: lllCarousel
+*/
 
 
 (function($){
@@ -8,6 +14,13 @@
 	var _jsonData; //it contains the JSON object
 	var numberOfScenes;
 	var currentScene;
+	
+	var _defaultTemplates = [
+		"/templates/specialEventTemplate.html",
+		"/templates/lllCarousel.html"
+	]
+	
+	var currentTemplate;
 	
 	
 	// --------------- Methods -------------------------------------
@@ -20,14 +33,12 @@
 			
 			_defaultSettings = {
 				feed: "/js/data1.json",
-				template: "/templates/main-template.html"
 			}
 			//overwrite the default values with the variables
 			if (settings) $.extend(_defaultSettings, settings);	
 			
-			methods.loadTemplate(pointer, _defaultSettings.template, function(){
-				methods.loadData(_defaultSettings.feed)
-			});
+			//load the JSON file and create the _json object
+			methods.loadData(_defaultSettings.feed);
 		},
 	
 		
@@ -44,7 +55,12 @@
 					_jsonData = data;
 					numberOfScenes = _jsonData.Entries.length;
 					currentScene = 1;
-					methods.draw(currentScene);
+					//Load the first TemplateType from the JSON file
+					currentTemplate = _jsonData.Entries[0].TemplateType;
+					
+					methods.loadTemplate(pointer, _defaultTemplates[currentTemplate], function(){
+						methods.draw(currentScene);
+					});
 				},
 				error: function(xhr, ajaxOptions, thrownError){	
 					alert(xhr.status);
@@ -78,7 +94,7 @@
 			//now we call the appropriate draw function based on what specified within the JSON file
 			switch (_jsonData.Entries[sceneNumber-1].TemplateType){
 				
-				case 'specialEventTemplate':
+				case 0: //specialEventTemplate
 				
 					//IMAGE
 					$('div.nvs_banner img').attr('src',_jsonData.Entries[sceneNumber-1].Image);
@@ -173,30 +189,35 @@
 			if (numberOfScenes >1){
 				$('div.nvs_banner a.next').click(function(e) {
 					$(pointer).find('div.nvs_banner').empty();
-					$(pointer).jsonReader('loadTemplate', pointer, _defaultSettings.template, function(){
-						if(currentScene == numberOfScenes){
-							currentScene = 1;
-							methods.draw(currentScene);
-						}else{
-							currentScene++;
-							methods.draw(currentScene);
-						}
-						
+					
+					if(currentScene == numberOfScenes){
+						currentScene = 1;
+						methods.draw(currentScene);
+					}else{
+						currentScene++;
+						currentTemplate = _jsonData.Entries[currentScene-1].TemplateType;
+					}
+					
+					methods.loadTemplate(pointer, _defaultTemplates[currentTemplate], function(){
+						methods.draw(currentScene);
 					});
-			});
+						
+				});
 			
 				$('div.nvs_banner a.prev').click(function(e) {
 					$(pointer).find('div.nvs_banner').empty();
-					$(pointer).jsonReader('loadTemplate', pointer, _defaultSettings.template, function(){
-						if (currentScene == 1){
-							currentScene = numberOfScenes;
-							methods.draw(currentScene);
-						}else{
-							currentScene--;
-							methods.draw(currentScene);
-						}
+					if (currentScene == 1){
+						currentScene = numberOfScenes;
+						methods.draw(currentScene);
+					}else{
+						currentScene--;
+					}	
+					
+					methods.loadTemplate(pointer, _defaultTemplates[currentTemplate], function(){
+						methods.draw(currentScene);
 					});
-			});
+						
+				});
 			}
 			// -------------------------------------------------------- END EVENT BINDING ---------------------------------------------------------------
 		}

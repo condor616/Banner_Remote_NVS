@@ -1,7 +1,7 @@
 {
     "Entries": [
         {
-			"TemplateType": "specialEventTemplate",
+			"TemplateType": 0,
             "Image": "../images/malaria-initiative.jpg",
             "Title": {
                 "Text": "Improving child health in Africa",
@@ -50,7 +50,7 @@
 		
 		
 		{
-			"TemplateType": "specialEventTemplate",
+			"TemplateType": 0,
             "Image": "../images/background-2.jpg",
             "Title": {
                 "Text": "Title second scene",
@@ -100,7 +100,7 @@
 		
 		
 		{
-			"TemplateType": "specialEventTemplate",
+			"TemplateType": 0,
             "Image": "../images/background-1.jpg",
             "Title": {
                 "Text": "Title",
