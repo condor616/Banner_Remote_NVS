@@ -180,8 +180,56 @@ JSON File:
 						$('div.nvs_banner img').attr('src',_jsonData.Entries[sceneNumber-1].Image);
 						
 						//Metadatas field
+						if (_jsonData.Entries[sceneNumber-1].Metadata.Left != "")
+							$('div.lll-metadata').css('left', _jsonData.Entries[sceneNumber-1].Metadata.Left);
+						
+						if (_jsonData.Entries[sceneNumber-1].Metadata.Top != "")
+							$('div.lll-metadata').css('top', _jsonData.Entries[sceneNumber-1].Metadata.Top);
+						
+						if (_jsonData.Entries[sceneNumber-1].Metadata.Color != ""){
+							$('div.lll-metadata').find('h2').css('color', _jsonData.Entries[sceneNumber-1].Metadata.Color);
+							$('div.lll-metadata').find('h3').css('color', _jsonData.Entries[sceneNumber-1].Metadata.Color);
+						}
+						
 						//TITLE
-						$('div.lll-metadata').css('left', _jsonData.Entries[sceneNumber-1].Metadata.Left, 'bottom', _jsonData.Entries[sceneNumber-1].Metadata.Size +'px');
+						$('div.lll-metadata').find('h2').html(_jsonData.Entries[sceneNumber-1].Title.Text);
+						
+						if (_jsonData.Entries[sceneNumber-1].Title.Width != "")
+							$('div.lll-metadata').find('h2').css('width', _jsonData.Entries[sceneNumber-1].Title.Width);
+						if (_jsonData.Entries[sceneNumber-1].Title.Size != "")
+							$('div.lll-metadata').find('h2').css('font-size', _jsonData.Entries[sceneNumber-1].Title.Size);
+						
+						
+						//DESCRIPTION
+						$('div.lll-metadata').find('h3').html(_jsonData.Entries[sceneNumber-1].Description.Text);
+						
+						if (_jsonData.Entries[sceneNumber-1].Description.Width != "")
+							$('div.lll-metadata').find('h3').css('width', _jsonData.Entries[sceneNumber-1].Description.Width);
+						if (_jsonData.Entries[sceneNumber-1].Description.Size != "")
+							$('div.lll-metadata').find('h3').css('font-size', _jsonData.Entries[sceneNumber-1].Description.Size);
+						
+						
+						//LINK
+						$('div.lll-link').find('a').html(_jsonData.Entries[sceneNumber-1].Link.Text);
+						$('div.lll-link').find('a').attr('href', _jsonData.Entries[sceneNumber-1].Link.Url);
+						$('div.lll-link').find('a').attr('target', _jsonData.Entries[sceneNumber-1].Link.Target);
+						
+						if (_jsonData.Entries[sceneNumber-1].Link.Color != "")
+							$('div.lll-link').find('a').css('color', _jsonData.Entries[sceneNumber-1].Link.Color);
+						
+						if (_jsonData.Entries[sceneNumber-1].Link.Bottom != "")
+							$('div.lll-link').css('bottom',_jsonData.Entries[sceneNumber-1].Link.Bottom);
+							
+						if (_jsonData.Entries[sceneNumber-1].Link.Left != "")
+							$('div.lll-link').css('left',_jsonData.Entries[sceneNumber-1].Link.Left);
+							
+							
+						
+						//SHARE BUTTONS
+						//How many share buttons?
+						for (var i=0; i<_jsonData.Entries[sceneNumber-1].ShareButtons.length; i++){
+							$('div.share-buttons').append("<a href=\""+ _jsonData.Entries[sceneNumber-1].ShareButtons[i].Url +"\" target=\"_blank\"><div class=\""+ _jsonData.Entries[sceneNumber-1].ShareButtons[i].ButtonType +"\"></div></a>");
+						}
 						
 						
 					

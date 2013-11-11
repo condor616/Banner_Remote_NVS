@@ -102,23 +102,22 @@
 			"TemplateType": 1,
             "Image": "../images/background-1.jpg",
 			"Metadata":{
-				"Left":"40px",
-				"Top" : "75px"
+				"Left":"",
+				"Top" : "",
+				"Color": ""
 			},
 			
             "Title": {
-                "Text": "Title",
-				"Width": "355px",
-                "Size": "28",
-                "Color": "#FFFFFF",
-				"Shadow-effect":"2px 4px 7px #000000"
+                "Text": "Long Live Life Long",
+				"Width": "",
+                "Size": ""
+                
             },
 			
             "Description": {
-                "Text": "Description 2",
+                "Text": "We believe that everybody on this fragile planet of ours derserves to live a normal life. We believe that everybody on this fragile planet of ours derserves to live a normal life. We believe that everybody on this fragile planet of ours derserves to live a normal life. We believe that everybody on this fragile planet of ours derserves to live a normal life. We believe that everybody on this fragile planet of ours derserves to live a normal life. We believe that everybody on this fragile planet of ours derserves to live a normal life.",
 				"Width" : "510px",
-                "Size": "14",
-                "Color": "#FFFFFF"
+                "Size": "14"
             },
 			
             "Link":  
@@ -126,9 +125,57 @@
                     "Text": "Read more",
                     "Url": "http://www.google.it",
                     "Target": "_blank",
-                    "Color": "#FFFFFF",
-					"Bottom" : "65px",
-					"Left" : "75px"
+                    "Color": "",
+					"Bottom" : "",
+					"Left" : ""
+                },
+            
+            "ShareButtons": [
+                
+                {
+                    "ButtonType": "twitter",
+                    "Url" : "https://twitter.com"
+                },
+                {
+                    "ButtonType": "facebook",
+                    "Url" : "https://facebook.com"
+                },
+				{
+                    "ButtonType": "email",
+                    "Url" : "https://twitter.com"
+                }
+            ]
+        },
+		{
+			"TemplateType": 1,
+            "Image": "../images/background-1.jpg",
+			"Metadata":{
+				"Left":"",
+				"Top" : "",
+				"Color": ""
+			},
+			
+            "Title": {
+                "Text": "Harnessing a Unique Moment in Neuroscience",
+				"Width": "480px",
+                "Size": "30px"
+                
+            },
+			
+            "Description": {
+                "Text": "Ricardo Dolmetch, Ph.D, is happy to be leading the Novartis Neuroscience team at a time when new technologies may finally provide answers.",
+				"Width" : "456px",
+                "Size": "14"
+            },
+			
+            "Link":  
+				{
+                    "Text": "Read more",
+                    "Url": "http://www.google.it",
+                    "Target": "_blank",
+                    "Color": "",
+					"Bottom" : "",
+					"Left" : ""
                 },
             
             "ShareButtons": [

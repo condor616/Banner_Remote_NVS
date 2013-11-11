@@ -277,14 +277,14 @@ div.nvs_banner div.lll-metadata{
 	left: 75px;
 	width: 800px;
 	height: auto;
-	max-height: 180px;
+	max-height: 220px;
 	overflow:hidden;
 	color:#ffffff;
 	position: absolute;
 }
 
 body#home div.nvs_banner div.lll-metadata h2{
-	font-size:45px;
+	font-size:40px;
 	margin: 0 10px 0 0;
 	text-shadow: 2px 4px 7px #000000;
 	display: block;
