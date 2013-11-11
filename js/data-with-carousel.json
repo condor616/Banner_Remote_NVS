@@ -1,0 +1,151 @@
+{
+    "Entries": [
+        {
+			"TemplateType": 0,
+            "Image": "../images/malaria-initiative.jpg",
+            "Title": {
+                "Text": "Improving child health in Africa",
+                "Size": "28",
+                "Color": "#FFFFFF"
+            },
+            "Description": {
+                "Text": "Novartis and TED are talking about improving child death in Africa at TEDGlobal 2013. By working togheter, we can dramatically improve healthcare in Africa. And that's worth fighting for.",
+                "Size": "14",
+                "Color": "#FFFFFF"
+            },
+            "Links": [
+                {
+                    "Text": "Learn more",
+                    "Url": "http://www.google.it",
+                    "Target": "blank",
+                    "Type": "url-red",
+                    "Color": "#FFFFFF"
+                }
+            ],
+            "Subpages": [
+                
+                {
+                    "iconType": "video",
+                    "iconTitle": "Title 1",
+                    "iconDescription": "Title 1",
+                    "introTitle": "Introduction title number one",
+                    "introDescription": "Introduction description number one"
+                },
+                {
+                    "iconType": "photo",
+                    "iconTitle": "Title 2",
+                    "iconDescription": "Description 2",
+                    "introTitle": "Introduction title number two",
+                    "introDescription": "Introduction description number two"
+                },
+                {
+                    "iconType": "document",
+                    "iconTitle": "Title 3",
+                    "iconDescription": "Description 3",
+                    "introTitle": "Introduction title number three",
+                    "introDescription": "Introduction description number three"
+                }
+            ]
+        },
+		
+		
+		{
+			"TemplateType": 0,
+            "Image": "../images/background-2.jpg",
+            "Title": {
+                "Text": "Title second scene",
+                "Size": "28",
+                "Color": "#FFFFFF"
+            },
+            "Description": {
+                "Text": "Novartis and TED are talking about improving child death in Africa at TEDGlobal 2013. By working togheter, we can dramatically improve healthcare in Africa. And that's worth fighting for.",
+                "Size": "14",
+                "Color": "#FFFFFF"
+            },
+            "Links": [
+                {
+                    "Text": "Learn more",
+                    "Url": "http://www.google.it",
+                    "Target": "blank",
+                    "Type": "pdf",
+                    "Color": "#FFFFFF"
+                }
+            ],
+            "Subpages": [
+                
+                {
+                    "iconType": "photo",
+                    "iconTitle": "Title 1",
+                    "iconDescription": "Title 1",
+                    "introTitle": "Introduction title number one",
+                    "introDescription": "Introduction description number one"
+                },
+                {
+                    "iconType": "document",
+                    "iconTitle": "Title 2",
+                    "iconDescription": "Description 2",
+                    "introTitle": "Introduction title number two",
+                    "introDescription": "Introduction description number two"
+                },
+                {
+                    "iconType": "document",
+                    "iconTitle": "Title 3",
+                    "iconDescription": "Description 3",
+                    "introTitle": "Introduction title number three",
+                    "introDescription": "Introduction description number three"
+                }
+            ]
+        },
+		
+		
+		{
+			"TemplateType": 1,
+            "Image": "../images/background-1.jpg",
+			"Metadata":{
+				"Left":"40px",
+				"Top" : "75px"
+			},
+			
+            "Title": {
+                "Text": "Title",
+				"Width": "355px",
+                "Size": "28",
+                "Color": "#FFFFFF",
+				"Shadow-effect":"2px 4px 7px #000000"
+            },
+			
+            "Description": {
+                "Text": "Description 2",
+				"Width" : "510px",
+                "Size": "14",
+                "Color": "#FFFFFF"
+            },
+			
+            "Link":  
+				{
+                    "Text": "Read more",
+                    "Url": "http://www.google.it",
+                    "Target": "_blank",
+                    "Color": "#FFFFFF",
+					"Bottom" : "65px",
+					"Left" : "75px"
+                },
+            
+            "ShareButtons": [
+                
+                {
+                    "ButtonType": "twitter",
+                    "Url" : "https://twitter.com"
+                },
+                {
+                    "ButtonType": "facebook",
+                    "Url" : "https://facebook.com"
+                },
+				{
+                    "ButtonType": "email",
+                    "Url" : "https://twitter.com"
+                }
+            ]
+        }
+    ]
+}

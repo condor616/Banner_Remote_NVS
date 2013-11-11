@@ -269,3 +269,78 @@ div#subpages div#subpages-nav div.active{
 	display: none;
 }
 
+
+/* ------------------------ LLL Css Styles ------------------------ */
+
+div.nvs_banner div.lll-metadata{
+	top: 40px;
+	left: 75px;
+	width: 800px;
+	height: auto;
+	max-height: 180px;
+	overflow:hidden;
+	color:#ffffff;
+	position: absolute;
+}
+
+body#home div.nvs_banner div.lll-metadata h2{
+	font-size:45px;
+	margin: 0 10px 0 0;
+	text-shadow: 2px 4px 7px #000000;
+	display: block;
+	width: auto;
+}
+
+body#home div.nvs_banner div.lll-metadata h3{
+	font-size: 15px;
+    font-weight: lighter;
+	line-height: 1.5em;
+	margin: 15px 10px 0 0;
+	display:block;
+	width:auto;
+}
+
+div.nvs_banner div.lll-link {
+    bottom: 65px;
+    left: 75px;
+    position: absolute;
+}
+
+div.lll-link a,
+div.lll-link a:visited,
+div.lll-link a:active,
+div.lll-link a:hover{
+	color:#ffffff;
+}
+
+div.nvs_banner div.share-buttons{
+	bottom: 25px;
+	position: absolute;
+	left: 65px;
+}
+
+div.nvs_banner div.share-buttons a div{
+	background:transparent url("../images/_common/buttons/buttons-share.gif") no-repeat scroll left top;
+	height: 28px;
+	width: 98px;
+	float:left;
+	margin-right:10px;
+	box-shadow: 4px 5px 10px -2px #333333;
+	
+}
+
+div.nvs_banner div.share-buttons a div.twitter{
+	background-position: 0 0;
+}
+
+div.nvs_banner div.share-buttons a div.facebook{
+	background-position: 0 -33px;
+}
+
+div.nvs_banner div.share-buttons a div.email{
+	background-position: 0 -66px;
+}
+
+
+
+

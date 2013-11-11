@@ -168,12 +168,30 @@ JSON File:
 					
 			
 			// -------------------------------------------------------- END EVENT BINDING ---------------------------------------------------------------
-				
+			
+					$('div#subpages-nav div.buttons div').first().mouseover();
+
+					break;
+					
+					
+					case 1: //lllCarousel
+					
+						//IMAGE
+						$('div.nvs_banner img').attr('src',_jsonData.Entries[sceneNumber-1].Image);
+						
+						//Metadatas field
+						//TITLE
+						$('div.lll-metadata').css('left', _jsonData.Entries[sceneNumber-1].Metadata.Left, 'bottom', _jsonData.Entries[sceneNumber-1].Metadata.Size +'px');
+						
+						
+					
+					
 					break;
 				
 			
 				} //end first switch-case
-				$('div#subpages-nav div.buttons div').first().mouseover();
+				
+				
 
 				
 				//HERE YOU CAN INSERT OTHER DRAW-TEMPLATE CASES
@@ -192,11 +210,12 @@ JSON File:
 					
 					if(currentScene == numberOfScenes){
 						currentScene = 1;
-						methods.draw(currentScene);
+						//methods.draw(currentScene);
 					}else{
 						currentScene++;
-						currentTemplate = _jsonData.Entries[currentScene-1].TemplateType;
 					}
+					
+					currentTemplate = _jsonData.Entries[currentScene-1].TemplateType;
 					
 					methods.loadTemplate(pointer, _defaultTemplates[currentTemplate], function(){
 						methods.draw(currentScene);
@@ -208,10 +227,12 @@ JSON File:
 					$(pointer).find('div.nvs_banner').empty();
 					if (currentScene == 1){
 						currentScene = numberOfScenes;
-						methods.draw(currentScene);
+						//methods.draw(currentScene);
 					}else{
 						currentScene--;
 					}	
+					
+					currentTemplate = _jsonData.Entries[currentScene-1].TemplateType;
 					
 					methods.loadTemplate(pointer, _defaultTemplates[currentTemplate], function(){
 						methods.draw(currentScene);
