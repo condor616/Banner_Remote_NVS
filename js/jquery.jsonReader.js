@@ -175,39 +175,32 @@ JSON File:
 					break;
 					
 					
-					case 2: //lllCarousel
+					case 2: //lllCarousel-2
 					
 						//IMAGE
 						$('div.nvs_banner img').attr('src',_jsonData.Entries[sceneNumber-1].Image);
 						
-						//Metadatas field
-						if (_jsonData.Entries[sceneNumber-1].Metadata.Left != "")
-							$('div.lll-metadata').css('left', _jsonData.Entries[sceneNumber-1].Metadata.Left);
+						//LLL-Wrapper field
+						if (_jsonData.Entries[sceneNumber-1].LLL-Wrapper.Left != "")
+							$('div.LLL-Wrapper').css('left', _jsonData.Entries[sceneNumber-1].LLL-Wrapper.Left);
 						
 						if (_jsonData.Entries[sceneNumber-1].Metadata.Top != "")
-							$('div.lll-metadata').css('top', _jsonData.Entries[sceneNumber-1].Metadata.Top);
-						
-						if (_jsonData.Entries[sceneNumber-1].Metadata.Color != ""){
-							$('div.lll-metadata').find('h2').css('color', _jsonData.Entries[sceneNumber-1].Metadata.Color);
-							$('div.lll-metadata').find('h3').css('color', _jsonData.Entries[sceneNumber-1].Metadata.Color);
-						}
+							$('div.LLL-Wrapper').css('top', _jsonData.Entries[sceneNumber-1].LLL-Wrapper.Top);
 						
 						//TITLE
 						$('div.lll-metadata').find('h2').html(_jsonData.Entries[sceneNumber-1].Title.Text);
 						
-						if (_jsonData.Entries[sceneNumber-1].Title.Width != "")
-							$('div.lll-metadata').find('h2').css('width', _jsonData.Entries[sceneNumber-1].Title.Width);
 						if (_jsonData.Entries[sceneNumber-1].Title.Size != "")
 							$('div.lll-metadata').find('h2').css('font-size', _jsonData.Entries[sceneNumber-1].Title.Size);
 						
 						
 						//DESCRIPTION
-						$('div.lll-metadata').find('h3').html(_jsonData.Entries[sceneNumber-1].Description.Text);
+						$('div.lll-metadata').find('div.desc').html(_jsonData.Entries[sceneNumber-1].Description.Text);
 						
 						if (_jsonData.Entries[sceneNumber-1].Description.Width != "")
-							$('div.lll-metadata').find('h3').css('width', _jsonData.Entries[sceneNumber-1].Description.Width);
+							$('div.lll-metadata').find('div.desc').css('width', _jsonData.Entries[sceneNumber-1].Description.Width);
 						if (_jsonData.Entries[sceneNumber-1].Description.Size != "")
-							$('div.lll-metadata').find('h3').css('font-size', _jsonData.Entries[sceneNumber-1].Description.Size);
+							$('div.lll-metadata').find('div.desc').css('font-size', _jsonData.Entries[sceneNumber-1].Description.Size);
 						
 						
 						//LINK
@@ -216,25 +209,38 @@ JSON File:
 						$('div.lll-link').find('a').attr('target', _jsonData.Entries[sceneNumber-1].Link.Target);
 						
 						if (_jsonData.Entries[sceneNumber-1].Link.Color != "")
-							$('div.lll-link').find('a').css('color', _jsonData.Entries[sceneNumber-1].Link.Color);
-						
-						if (_jsonData.Entries[sceneNumber-1].Link.Bottom != "")
-							$('div.lll-link').css('bottom',_jsonData.Entries[sceneNumber-1].Link.Bottom);
-							
-						if (_jsonData.Entries[sceneNumber-1].Link.Left != "")
-							$('div.lll-link').css('left',_jsonData.Entries[sceneNumber-1].Link.Left);
-							
+							$('div.lll-link').find('a').css('color', _jsonData.Entries[sceneNumber-1].Link.Color);		
 							
 						
 						//SHARE BUTTONS
-						//How many share buttons?
+						/*
 						for (var i=0; i<_jsonData.Entries[sceneNumber-1].ShareButtons.length; i++){
 							$('div.share-buttons').append("<a href=\""+ _jsonData.Entries[sceneNumber-1].ShareButtons[i].Url +"\" target=\"_blank\"><div class=\""+ _jsonData.Entries[sceneNumber-1].ShareButtons[i].ButtonType +"\"></div></a>");
 						}
-						
-						
-					
-					
+						*/
+						if ( (_jsonData.Entries[sceneNumber-1].ShareButtons.Twitter == "yes" ||
+							_jsonData.Entries[sceneNumber-1].ShareButtons.Twitter == "Yes" ||
+							_jsonData.Entries[sceneNumber-1].ShareButtons.Twitter == "YES" ) && 
+							_jsonData.Entries[sceneNumber-1].ShareButtons.TwitterUrl != ""){
+								
+								$('div.share-buttons').append("<a href=\"" + _jsonData.Entries[sceneNumber-1].ShareButtons.TwitterUrl + "\">Twitter</a>");
+						}
+						if ( (_jsonData.Entries[sceneNumber-1].ShareButtons.Share == "yes" ||
+							_jsonData.Entries[sceneNumber-1].ShareButtons.Share == "Yes" ||
+							_jsonData.Entries[sceneNumber-1].ShareButtons.Share == "YES" )  && 
+							_jsonData.Entries[sceneNumber-1].ShareButtons.ShareUrl != ""){
+								
+								$('div.share-buttons').append("<a href=\"" + _jsonData.Entries[sceneNumber-1].ShareButtons.ShareUrl + "\">Share</a>");
+						}
+						if ( (_jsonData.Entries[sceneNumber-1].ShareButtons.Email == "yes" ||
+							_jsonData.Entries[sceneNumber-1].ShareButtons.Email == "Yes" ||
+							_jsonData.Entries[sceneNumber-1].ShareButtons.Email == "YES" )  && 
+							_jsonData.Entries[sceneNumber-1].ShareButtons.EmailUrl != ""){
+								
+								$('div.share-buttons').append("<a href=\"" + _jsonData.Entries[sceneNumber-1].ShareButtons.EmailUrl + "\">Email</a>");
+						}
+
+
 					break;
 				
 			

@@ -149,23 +149,22 @@
 		{
 			"TemplateType": 1,
             "Image": "../images/background-1.jpg",
-			"Metadata":{
+			
+			"LLL-Wrapper":{
 				"Left":"",
-				"Top" : "",
-				"Color": ""
-			},
+				"Top":""
+			}
 			
             "Title": {
                 "Text": "Harnessing a Unique Moment in Neuroscience",
-				"Width": "480px",
-                "Size": "30px"
+                "Size": ""
                 
             },
 			
             "Description": {
                 "Text": "Ricardo Dolmetch, Ph.D, is happy to be leading the Novartis Neuroscience team at a time when new technologies may finally provide answers.",
-				"Width" : "456px",
-                "Size": "14"
+				"Width" : "",
+                "Size": ""
             },
 			
             "Link":  
@@ -174,25 +173,19 @@
                     "Url": "http://www.google.it",
                     "Target": "_blank",
                     "Color": "",
-					"Bottom" : "",
-					"Left" : ""
                 },
             
-            "ShareButtons": [
+            "ShareButtons": {
                 
-                {
-                    "ButtonType": "twitter",
-                    "Url" : "https://twitter.com"
-                },
-                {
-                    "ButtonType": "facebook",
-                    "Url" : "https://facebook.com"
-                },
-				{
-                    "ButtonType": "email",
-                    "Url" : "https://twitter.com"
-                }
-            ]
+                    "Twitter": "yes",
+                    "TwitterUrl" : "https://twitter.com"
+                
+                    "Share": "yes",
+                    "ShareUrl" : "https://facebook.com"
+                			
+                    "Email": "yes",
+                    "ShareUrl" : "https://twitter.com"     
+			}
         }
     ]
 }
