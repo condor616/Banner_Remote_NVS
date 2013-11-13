@@ -181,11 +181,11 @@ JSON File:
 						$('div.nvs_banner img').attr('src',_jsonData.Entries[sceneNumber-1].Image);
 						
 						//LLL-Wrapper field
-						if (_jsonData.Entries[sceneNumber-1].LLL-Wrapper.Left != "")
-							$('div.LLL-Wrapper').css('left', _jsonData.Entries[sceneNumber-1].LLL-Wrapper.Left);
+						if (_jsonData.Entries[sceneNumber-1].LLLwrapper.Left != "")
+							$('div.lll-wrapper').css('left', _jsonData.Entries[sceneNumber-1].LLLwrapper.Left);
 						
-						if (_jsonData.Entries[sceneNumber-1].Metadata.Top != "")
-							$('div.LLL-Wrapper').css('top', _jsonData.Entries[sceneNumber-1].LLL-Wrapper.Top);
+						if (_jsonData.Entries[sceneNumber-1].LLLwrapper.Top != "")
+							$('div.lll-wrapper').css('top', _jsonData.Entries[sceneNumber-1].LLLwrapper.Top);
 						
 						//TITLE
 						$('div.lll-metadata').find('h2').html(_jsonData.Entries[sceneNumber-1].Title.Text);

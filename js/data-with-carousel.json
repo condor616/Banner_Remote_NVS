@@ -97,73 +97,24 @@
             ]
         },
 		
-		
 		{
-			"TemplateType": 1,
-            "Image": "../images/background-1.jpg",
-			"Metadata":{
+			"TemplateType": 2,
+            "Image": "../images/neuroscience-background.jpg",
+			
+			"LLLwrapper": {
 				"Left":"",
-				"Top" : "",
-				"Color": ""
+				"Top":""
 			},
 			
             "Title": {
-                "Text": "Long Live Life Long",
-				"Width": "",
-                "Size": ""
-                
-            },
-			
-            "Description": {
-                "Text": "We believe that everybody on this fragile planet of ours derserves to live a normal life. We believe that everybody on this fragile planet of ours derserves to live a normal life. We believe that everybody on this fragile planet of ours derserves to live a normal life. We believe that everybody on this fragile planet of ours derserves to live a normal life. We believe that everybody on this fragile planet of ours derserves to live a normal life. We believe that everybody on this fragile planet of ours derserves to live a normal life.",
-				"Width" : "510px",
-                "Size": "14"
-            },
-			
-            "Link":  
-				{
-                    "Text": "Read more",
-                    "Url": "http://www.google.it",
-                    "Target": "_blank",
-                    "Color": "",
-					"Bottom" : "",
-					"Left" : ""
-                },
-            
-            "ShareButtons": [
-                
-                {
-                    "ButtonType": "twitter",
-                    "Url" : "https://twitter.com"
-                },
-                {
-                    "ButtonType": "facebook",
-                    "Url" : "https://facebook.com"
-                },
-				{
-                    "ButtonType": "email",
-                    "Url" : "https://twitter.com"
-                }
-            ]
-        },
-		{
-			"TemplateType": 1,
-            "Image": "../images/background-1.jpg",
-			
-			"LLL-Wrapper":{
-				"Left":"",
-				"Top":""
-			}
-			
-            "Title": {
-                "Text": "Harnessing a Unique Moment in Neuroscience",
+                "Text": "Harnessing a Unique<br /> Moment in Neuroscience",
                 "Size": ""
                 
             },
 			
             "Description": {
                 "Text": "Ricardo Dolmetch, Ph.D, is happy to be leading the Novartis Neuroscience team at a time when new technologies may finally provide answers.",
-				"Width" : "",
+				"Width" : "500px",
                 "Size": ""
             },
 			
@@ -172,16 +123,16 @@
                     "Text": "Read more",
                     "Url": "http://www.google.it",
                     "Target": "_blank",
-                    "Color": "",
+                    "Color": ""
                 },
             
             "ShareButtons": {
                 
                     "Twitter": "yes",
-                    "TwitterUrl" : "https://twitter.com"
+                    "TwitterUrl" : "https://twitter.com",
                 
                     "Share": "yes",
-                    "ShareUrl" : "https://facebook.com"
+                    "ShareUrl" : "https://facebook.com",
                 			
                     "Email": "yes",
                     "ShareUrl" : "https://twitter.com"     
