@@ -374,7 +374,7 @@ div.nvs_banner div.container div.lll-metadata{
 
  div.nvs_banner div.container div.lll-metadata a h2{
 	color:#ffffff;
-	font-size:40px;
+	font-size:32px;
 	margin: 0 10px 0 0;
 	text-shadow: black 0.1em 0.1em 0.2em;
 	width: auto;
@@ -389,9 +389,9 @@ div.nvs_banner div.container div.lll-metadata{
     position:inherit;
 }
 
-div.nvs_banner div.container div.lll-metadata h3{
+div.nvs_banner div.container div.lll-metadata div.desc{
 	color:#ffffff;
-	font-size: 15px;
+	font-size: 14px;
     font-weight: lighter;
 	line-height: 1.2em;
 	margin: 15px 10px 0 0;

@@ -97,27 +97,25 @@
             ]
         },
 		
-		
 		{
 			"TemplateType": 1,
-            "Image": "../images/background-1.jpg",
-			"Metadata":{
+            "Image": "../images/neuroscience-background.jpg",
+			
+			"LLL-Wrapper":{
 				"Left":"",
-				"Top" : "",
-				"Color": ""
-			},
+				"Top":""
+			}
 			
             "Title": {
-                "Text": "Long Live Life Long",
-				"Width": "",
+                "Text": "Harnessing a Unique<br />Moment in Neuroscience",
                 "Size": ""
                 
             },
 			
             "Description": {
-                "Text": "We believe that everybody on this fragile planet of ours derserves to live a normal life. We believe that everybody on this fragile planet of ours derserves to live a normal life. We believe that everybody on this fragile planet of ours derserves to live a normal life. We believe that everybody on this fragile planet of ours derserves to live a normal life. We believe that everybody on this fragile planet of ours derserves to live a normal life. We believe that everybody on this fragile planet of ours derserves to live a normal life.",
-				"Width" : "510px",
-                "Size": "14"
+                "Text": "Ricardo Dolmetsch, Ph.D, is happy  to be leading the Novartis Neuroscience team at a time when technologies may finally provide answers to age-old questions about the brain.",
+				"Width" : "",
+                "Size": ""
             },
 			
             "Link":  
@@ -126,73 +124,19 @@
                     "Url": "http://www.google.it",
                     "Target": "_blank",
                     "Color": "",
-					"Bottom" : "",
-					"Left" : ""
                 },
             
-            "ShareButtons": [
+            "ShareButtons": {
                 
-                {
-                    "ButtonType": "twitter",
-                    "Url" : "https://twitter.com"
-                },
-                {
-                    "ButtonType": "facebook",
-                    "Url" : "https://facebook.com"
-                },
-				{
-                    "ButtonType": "email",
-                    "Url" : "https://twitter.com"
-                }
-            ]
-        },
-		{
-			"TemplateType": 1,
-            "Image": "../images/background-1.jpg",
-			"Metadata":{
-				"Left":"",
-				"Top" : "",
-				"Color": ""
-			},
-			
-            "Title": {
-                "Text": "Harnessing a Unique Moment in Neuroscience",
-				"Width": "480px",
-                "Size": "30px"
+                    "Twitter": "yes",
+                    "TwitterUrl" : "https://twitter.com"
                 
-            },
-			
-            "Description": {
-                "Text": "Ricardo Dolmetch, Ph.D, is happy to be leading the Novartis Neuroscience team at a time when new technologies may finally provide answers.",
-				"Width" : "456px",
-                "Size": "14"
-            },
-			
-            "Link":  
-				{
-                    "Text": "Read more",
-                    "Url": "http://www.google.it",
-                    "Target": "_blank",
-                    "Color": "",
-					"Bottom" : "",
-					"Left" : ""
-                },
-            
-            "ShareButtons": [
-                
-                {
-                    "ButtonType": "twitter",
-                    "Url" : "https://twitter.com"
-                },
-                {
-                    "ButtonType": "facebook",
-                    "Url" : "https://facebook.com"
-                },
-				{
-                    "ButtonType": "email",
-                    "Url" : "https://twitter.com"
-                }
-            ]
+                    "Share": "yes",
+                    "ShareUrl" : "https://facebook.com"
+                			
+                    "Email": "yes",
+                    "ShareUrl" : "https://twitter.com"     
+			}
         }
     ]
 }
