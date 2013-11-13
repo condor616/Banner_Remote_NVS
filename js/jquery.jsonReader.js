@@ -17,7 +17,8 @@ JSON File:
 	
 	var _defaultTemplates = [
 		"/templates/specialEventTemplate.html",
-		"/templates/lllCarousel.html"
+		"/templates/lllCarousel.html",
+		"/templates/lllCarousel-2.html"
 	]
 	
 	var currentTemplate;
@@ -174,7 +175,7 @@ JSON File:
 					break;
 					
 					
-					case 1: //lllCarousel
+					case 2: //lllCarousel
 					
 						//IMAGE
 						$('div.nvs_banner img').attr('src',_jsonData.Entries[sceneNumber-1].Image);

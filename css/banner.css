@@ -270,7 +270,7 @@ div#subpages div#subpages-nav div.active{
 }
 
 
-/* ------------------------ LLL Css Styles ------------------------ */
+/* ------------------------ LLL Css Styles  OLD ------------------------ 
 
 div.nvs_banner div.lll-metadata{
 	top: 40px;
@@ -340,7 +340,99 @@ div.nvs_banner div.share-buttons a div.facebook{
 div.nvs_banner div.share-buttons a div.email{
 	background-position: 0 -66px;
 }
+*/
 
+/* ------------------------ LLL Css Styles NEW ------------------------ */
+
+
+div.nvs_banner div.lll-wrapper{
+	height:240px; 
+	top:20px; 
+	left:75; 
+	width:800px; 
+	position:absolute; 
+	overflow:hidden
+}
+
+div.nvs_banner div.container{
+	font-family: Verdana,Arial,Helvetica,sans-serif;
+	top: 20px;
+	width: 800px;
+	height: 265px;
+	overflow:hidden;
+	color:#ffffff;
+	position: absolute;
+	display:table;
+}
+
+div.nvs_banner div.container div.lll-metadata{
+	display:table-cell;
+	text-align: left;
+   	vertical-align: middle;
+	overflow: hidden;	
+}
+
+ div.nvs_banner div.container div.lll-metadata a h2{
+	color:#ffffff;
+	font-size:40px;
+	margin: 0 10px 0 0;
+	text-shadow: black 0.1em 0.1em 0.2em;
+	width: auto;
+	
+	/*Overwrite*/
+	filter: progid:DXImageTransform.Microsoft.Shadow(Strength=7,direction=135,color=000000);
+	background: none;
+    font-family: inherit;
+    font-weight:bolder;
+    line-height: inherit;
+    padding:inherit;
+    position:inherit;
+}
+
+div.nvs_banner div.container div.lll-metadata h3{
+	color:#ffffff;
+	font-size: 15px;
+    font-weight: lighter;
+	line-height: 1.2em;
+	margin: 15px 10px 0 0;
+	display:block;
+	width:auto;
+}
+
+div.nvs_banner div.container div.lll-metadata div.lll-link {
+   margin-top:15px;
+}
+
+div.nvs_banner div.container div.lll-metadata div.lll-link a,
+div.nvs_banner div.container div.lll-metadata div.lll-link a:visited,
+div.nvs_banner div.container div.lll-metadata div.lll-link a:active,
+div.nvs_banner div.container div.lll-metadata div.lll-link a:hover{
+	color:#ffffff;
+	text-decoration:none;
+}
+
+div.nvs_banner div.share-buttons{
+	bottom: 40px;
+    left: 75px;
+    position: absolute;
+}
+
+div.nvs_banner div.share-buttons a {
+	background-color:#fcaa2a;
+	width: 100px;
+	float:left;
+	margin-right:10px;
+	box-shadow: 4px 5px 10px -2px #333333;
+	line-height: 2.2em;
+	text-align: center;
+	color:#714510;
+	text-transform:uppercase;
+	font-size:0.9em;
+	font-weight:600;
+}
+
+
+/* -----------------------------------------------------------------------------------------  */
 
 
 
