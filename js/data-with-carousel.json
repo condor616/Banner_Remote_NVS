@@ -98,23 +98,23 @@
         },
 		
 		{
-			"TemplateType": 1,
+			"TemplateType": 2,
             "Image": "../images/neuroscience-background.jpg",
 			
-			"LLL-Wrapper":{
+			"LLLwrapper": {
 				"Left":"",
 				"Top":""
-			}
+			},
 			
             "Title": {
-                "Text": "Harnessing a Unique<br />Moment in Neuroscience",
+                "Text": "Harnessing a Unique<br /> Moment in Neuroscience",
                 "Size": ""
                 
             },
 			
             "Description": {
-                "Text": "Ricardo Dolmetsch, Ph.D, is happy  to be leading the Novartis Neuroscience team at a time when technologies may finally provide answers to age-old questions about the brain.",
-				"Width" : "",
+                "Text": "Ricardo Dolmetch, Ph.D, is happy to be leading the Novartis Neuroscience team at a time when new technologies may finally provide answers.",
+				"Width" : "500px",
                 "Size": ""
             },
 			
@@ -123,16 +123,16 @@
                     "Text": "Read more",
                     "Url": "http://www.google.it",
                     "Target": "_blank",
-                    "Color": "",
+                    "Color": ""
                 },
             
             "ShareButtons": {
                 
                     "Twitter": "yes",
-                    "TwitterUrl" : "https://twitter.com"
+                    "TwitterUrl" : "https://twitter.com",
                 
                     "Share": "yes",
-                    "ShareUrl" : "https://facebook.com"
+                    "ShareUrl" : "https://facebook.com",
                 			
                     "Email": "yes",
                     "ShareUrl" : "https://twitter.com"     
