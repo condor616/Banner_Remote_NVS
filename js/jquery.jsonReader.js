@@ -223,21 +223,21 @@ JSON File:
 							_jsonData.Entries[sceneNumber-1].ShareButtons.Twitter == "YES" ) && 
 							_jsonData.Entries[sceneNumber-1].ShareButtons.TwitterUrl != ""){
 								
-								$('div.share-buttons').append("<a href=\"" + _jsonData.Entries[sceneNumber-1].ShareButtons.TwitterUrl + "\">Twitter</a>");
+								$('div.share-buttons').append("<a target=\"_blank\" href=\"" + _jsonData.Entries[sceneNumber-1].ShareButtons.TwitterUrl + "\">Tweet</a>");
 						}
 						if ( (_jsonData.Entries[sceneNumber-1].ShareButtons.Share == "yes" ||
 							_jsonData.Entries[sceneNumber-1].ShareButtons.Share == "Yes" ||
 							_jsonData.Entries[sceneNumber-1].ShareButtons.Share == "YES" )  && 
 							_jsonData.Entries[sceneNumber-1].ShareButtons.ShareUrl != ""){
 								
-								$('div.share-buttons').append("<a href=\"" + _jsonData.Entries[sceneNumber-1].ShareButtons.ShareUrl + "\">Share</a>");
+								$('div.share-buttons').append("<a target=\"_blank\" href=\"" + _jsonData.Entries[sceneNumber-1].ShareButtons.ShareUrl + "\">Share</a>");
 						}
 						if ( (_jsonData.Entries[sceneNumber-1].ShareButtons.Email == "yes" ||
 							_jsonData.Entries[sceneNumber-1].ShareButtons.Email == "Yes" ||
 							_jsonData.Entries[sceneNumber-1].ShareButtons.Email == "YES" )  && 
 							_jsonData.Entries[sceneNumber-1].ShareButtons.EmailUrl != ""){
 								
-								$('div.share-buttons').append("<a href=\"" + _jsonData.Entries[sceneNumber-1].ShareButtons.EmailUrl + "\">Email</a>");
+								$('div.share-buttons').append("<a target=\"_blank\" href=\"" + _jsonData.Entries[sceneNumber-1].ShareButtons.EmailUrl + "\">Email</a>");
 						}
 
 
