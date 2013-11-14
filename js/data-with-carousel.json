@@ -98,7 +98,7 @@
         },
 		
 		{
-			"TemplateType": 2,
+			"TemplateType": 1,
             "Image": "../images/neuroscience-background.jpg",
 			
 			"LLLwrapper": {
